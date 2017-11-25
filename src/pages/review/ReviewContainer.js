@@ -5,11 +5,15 @@ import './Review.css';
 
 import {Link} from 'react-router-dom';
 
-export default class LoginContainer extends Component {
+class LoginContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
         };
+    }
+
+    componentDidMount() {
+      this.props.logic('REVIEW_TRANSLATION');
     }
 
     render() {
@@ -86,3 +90,16 @@ export default class LoginContainer extends Component {
     }
 
 }
+
+
+function mapStateToProps(store) {
+    return {
+        state: store.review
+    };
+}
+
+export default connect(mapStateToProps, {
+    logic: (type, payload)=>{
+        return {type, payload}
+    }
+})(LoginContainer);
