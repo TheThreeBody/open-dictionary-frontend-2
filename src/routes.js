@@ -7,6 +7,7 @@ import Login from './pages/login/LoginContainer';
 import User from './pages/user/UserContainer';
 import Register from './pages/register/RegisterContainer';
 import Addword from './pages/addword/AddwordContainer';
+import Review from './pages/review/ReviewContainer';
 
 export default (
     <div>
@@ -26,6 +27,9 @@ export default (
                 <a class="nav-link" href="/addword">Addword</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="/review">Review</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
               </li>
               <li class="nav-item">
@@ -42,5 +46,6 @@ export default (
         <Route exact path="/user" component={User}/>
         <Route exact path="/register" component={Register}/>
         <Route exact path="/addword" component={Addword}/>
+        <Route exact path="/review" component={Review}/>
     </div>
 );
