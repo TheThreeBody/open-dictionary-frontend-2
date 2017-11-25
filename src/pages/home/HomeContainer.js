@@ -22,9 +22,7 @@ export class HomeContainer extends Component {
         return (
             <div class = "">
               <header>
-                  <h1 class = "page-name"> Open Dictionary
-
-                  </h1>
+                  <h1 class = "page-name"> Open Dictionary</h1>
               </header>
               <div class="container-ui">
                 <div class="contain-search-bar">
