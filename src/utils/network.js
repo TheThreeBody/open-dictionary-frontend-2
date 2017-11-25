@@ -1,7 +1,7 @@
-
+import axios from 'axios';
 const GRAPHSQL_API = `http://106.14.4.255:3000/graphql`;
 
-import axios from 'axios';
+
 
 export const login = async function({name,email}){
     const query = `
@@ -55,16 +55,12 @@ export const signup = function(variables) {
 export const searchWords = function(variables) {
     const query = `
         query($hanzi: String!) {
-         allChinese(condition:{hanzi:$hanzi){
+         allChinese(condition:{hanzi:$hanzi}){
             nodes{
               id,
               hanzi,
               pinyin,
-              posId,
               createdAt,
-              poByPosId {
-                id
-              },
             }
           }
         }
@@ -75,7 +71,3 @@ export const searchWords = function(variables) {
         variables
     })
 }
-
-
-
-

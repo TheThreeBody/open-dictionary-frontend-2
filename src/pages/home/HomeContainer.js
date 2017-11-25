@@ -3,22 +3,63 @@ import {connect} from 'react-redux';
 //Import css
 import './Home.css';
 //Import assets
-import logo from './assets/logo.svg';
-
-import {Link} from 'react-router-dom';
+import {searchWords} from "../../utils/network"
 
 export class HomeContainer extends Component {
+
+    state= {
+        word:'',
+        loading:false,
+        wordTranslate:'translates',
+    }
+
     constructor(props) {
         super(props);
-        this.state = {
-        };
     }
 
     componentDidMount() {
         this.props.logic("GET_DATA_REQUEST", {})
     }
 
-    render() {
+
+    search = (e)=> {
+        if (!this.input.value) {
+            return
+        }
+
+        e.preventDefault()
+
+        this.setState(() => ({loading: true}))
+
+        searchWords({hanzi:this.input.value})
+            .then((s) => this.setState(() => ({
+                wordTranslate:s.data.data.allChinese.nodes,
+                loading: false,
+        })))
+    }
+
+    render(){
+
+        this.state.wordTranslate=[{"id":544,"hanzi":"好","pinyin":"hǎo","createdAt":"2017-11-25T12:05:35.188483"}]
+
+        const Translate = this.state.wordTranslate.map((key) => {
+            return (
+                <li class="review-words-item">
+                    <ul class="within-item">
+                        <li>
+                            <div class="contain-items-in-list contain-word">
+                                <p class="text-within-item">Word: <b class="actual-word">{key.hanzi}</b></p >
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contain-items-in-list contain-translation">
+                                <p class="text-within-item">Translation: <b class="actual-word">{'aa'}</b></p >
+                            </div>
+                        </li>
+                    </ul>
+                </li>   )
+        })
+
         return (
             <div class = "">
               <header>
@@ -28,15 +69,22 @@ export class HomeContainer extends Component {
                 <div class="contain-search-bar">
                   <h1 id="search-bar-label">Type in Hanzi</h1>
                   <div class="search-bar-div">
-                    <input placeholder="你好！" type="text" class="search-bar-itself"></input>
+                      <input
+                          className='search-bar-itself'
+                          type='text'
+                          placeholder="你好！"
+                          ref={(input) => this.input = input}
+                      />
                     <div class="contain-img-search">
                       <img src="" id="img-search"></img>
                     </div>
+
                   </div>
-                  <button class="submit-button">Submit</button>
+                  <button class="submit-button" onClick={this.search}>Submit</button>
                 </div>
                 <div class="contain-translation-results">
-                  <h1>Translations</h1>
+                    <h1 >Translations</h1>
+                    {Translate}
                 </div>
               </div>
             </div>
