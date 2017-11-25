@@ -51,19 +51,26 @@ export class HomeContainer extends Component {
       this.props.logic('ADDWORD_SET_STATE', {
         translation: evt.target.value
       })
-    }    
+    }
 
     render() {
         // console.log(this.props.home);
         const { hanzi, pinyin, translation } = this.props.state;
         return (
             <div className="">
-              <input value={hanzi} onChange={this._onChangeHanzi.bind(this)} type="text" placeholder={'hanzi'} name="hanzi"/><br/>
-              <input value={pinyin} onChange={this._onChangePinyin.bind(this)} type="text" placeholder={'pinyin'} name="pinyin"/><br/>
+              <div class="contain">
 
-              <input value={translation} onChange={this._onChangeTranslation.bind(this)} type="text" placeholder={'translation'} name="translation"/><br/>
-
-              <button onClick={this._submit.bind(this)}>{'Submit'}</button>
+                <div class="contain-form">
+                  <h1 class="form-label">Add a new word!</h1>
+                  <h3 class="form-sub-label">We appreciate your help in contributing to this cause.</h3>
+                  <form action="post" class="form-class">
+                    <input class="input-elements input-text-style" value={hanzi} onChange={this._onChangeHanzi.bind(this)} type="text" placeholder={'hanzi'} name="hanzi"/>
+                    <input class="input-elements input-text-style" value={pinyin} onChange={this._onChangePinyin.bind(this)} type="text" placeholder={'pinyin'} name="pinyin"/>
+                    <input class="input-elements input-text-style" value={translation} onChange={this._onChangeTranslation.bind(this)} type="text" placeholder={'translation'} name="translation"/>
+                    <button class="input-elements input-submit-button" onClick={this._submit.bind(this)}>{'Submit'}</button>
+                  </form>
+                </div>
+              </div>
             </div>
         )
     }
