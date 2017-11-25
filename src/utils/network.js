@@ -54,16 +54,18 @@ export const signup = function(variables) {
 
 export const searchWords = function(variables) {
     const query = `
-        query($hanzi: String!) {
-         allChinese(condition:{hanzi:$hanzi}){
-            nodes{
-              id,
-              hanzi,
-              pinyin,
-              createdAt,
-            }
-          }
-        }
+query($hanzi: String) {
+  allApprovedTransaltions(condition: {
+    hanzi: $hanzi
+  }) {
+    nodes {
+      english,
+      hanzi,
+      pinyin,
+      translationId
+    }
+  }
+}
     `
 
     return axios.post(GRAPHSQL_API, {
