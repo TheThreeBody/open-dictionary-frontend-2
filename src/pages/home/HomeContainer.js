@@ -22,7 +22,7 @@ export class HomeContainer extends Component {
         return (
             <div class = "">
               <header>
-                  <h1 class = "page-name"> Open Dictionary</h1>
+                  <img class="big-header-logo" src="/open_logo.png"/>
               </header>
               <div class="container-ui">
                 <div class="contain-search-bar">
