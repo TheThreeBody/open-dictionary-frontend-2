@@ -1,0 +1,67 @@
+.contain{
+  padding:80px 120px;
+}
+.main-label{
+  font-size:50px;
+  color:white;
+}
+.main-sub-label{
+  font-size:15px;
+}
+.ul-contain-review-words{
+  margin-top:20px;
+  list-style: none;
+  display:block;
+  width:100%;
+  padding:0;
+}
+.review-words-item{
+  display:inline-block;
+  width:100%;
+  border:1px solid white;
+  height:100px;
+}
+ul.within-item{
+  display:inline-block;
+  list-style: none;
+  width:100%;
+  padding:0;
+}
+.within-item > li{
+  display:inline-block;
+  width:33%;
+}
+.contain-items-in-list{
+  height:100px;
+}
+.text-within-item{
+  margin-top:10%;
+  padding-left:15px;
+}
+.actual-word{
+  font-size:20px;
+  margin-left:5px;
+  border-bottom:1px solid white;
+}
+.judgement-buttons{
+  padding:10px 15px;
+  border:1px solid white;
+  color:black;
+  cursor: pointer;
+  background-color:#2292f9;
+  color:white;
+}
+.judgement-buttons:hover{
+  background-color:white;
+  color:black;
+  transition:all 250ms ease-in-out;
+}
+.judgement-buttons:focus{
+  outline:0;
+}
+.judgement-buttons:click{
+  outline:0;
+}
+.judge-rejected-btn{
+  border-left:0;
+}
