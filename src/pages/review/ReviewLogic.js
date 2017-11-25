@@ -15,7 +15,8 @@ query {
     nodes {
       english,
       hanzi,
-      pinyin
+      pinyin,
+      translationId
     }
   }
 }
@@ -24,7 +25,16 @@ query {
         const result = await axios.post('http://106.14.4.255:3000/graphql', {
           query
         })
-        console.log(result.data.data.allTranslations.nodes);
+
+
+        // console.log(result.data.data.allTranslations.nodes)
+        dispatch({
+          type: 'REVIEW_SET_STATE',
+          payload: {
+            translations: result.data.data.allTranslations.nodes,
+          }
+        })
+
       } catch (error){
         console.warn(error);
       }
@@ -55,6 +65,9 @@ const rejectWord = createLogic({
           query
         })
         console.warn('reject success')
+        dispatch({
+          type: 'REVIEW_TRANSLATION'
+        })
         // console.log(result.data.data.allTranslations.nodes);
       } catch (error){
         console.warn(error);
@@ -84,6 +97,10 @@ const approveWord = createLogic({
         const result = await axios.post('http://106.14.4.255:3000/graphql', {
           query
         })
+        dispatch({
+          type: 'REVIEW_TRANSLATION'
+        })
+
         console.warn('approve success')
         // console.log(result.data.data.allTranslations.nodes);
       } catch (error){
