@@ -17,7 +17,7 @@ mutation($hanzi: String, $pinyin: String, $translation: String) {
     hanzi: $hanzi,
     pinyin: $pinyin,
     translation: $translation,
-    userId: 3
+    userId: 1
   }) {
     clientMutationId
   }
@@ -33,6 +33,17 @@ mutation($hanzi: String, $pinyin: String, $translation: String) {
           }
         })
         console.log(result);
+
+
+        dispatch({
+          type: 'ADDWORD_SET_STATE',
+          payload: {
+            hanzi: '',
+            pinyin: '',
+            translation: '',
+          }
+        })
+
       } catch (error){
         console.warn(error);
       }
