@@ -20,16 +20,16 @@ export default (
               <li class="nav-item">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
+              {/*<li class="nav-item">
                 <a class="nav-link" href="/user">User</a>
-              </li>
+              </li>*/}
               <li class="nav-item">
-                <a class="nav-link" href="/addword">Addword</a>
+                <a class="nav-link" href="/addword">AddWord</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/review">Review</a>
               </li>
-              <li class="nav-item">
+              {/*<li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
               </li>
               <li class="nav-item">
@@ -37,7 +37,7 @@ export default (
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Sign Out</a>
-              </li>
+              </li>*/}
             </ul>
           </div>
         </nav>

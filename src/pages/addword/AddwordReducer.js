@@ -5,7 +5,8 @@ import {createReducer} from '../../helperMethods';
 const initialState = {
     //Add States Here
     hanzi: '',
-    
+    showThankyou: false,
+
 };
 
 export default createReducer(initialState, {

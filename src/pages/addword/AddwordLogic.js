@@ -41,8 +41,18 @@ mutation($hanzi: String, $pinyin: String, $translation: String) {
             hanzi: '',
             pinyin: '',
             translation: '',
+            showThankyou: true
           }
         })
+
+        setTimeout(function(){
+          dispatch({
+            type: 'ADDWORD_SET_STATE',
+            payload: {
+              showThankyou: false
+            }
+          })
+        },2000)
 
       } catch (error){
         console.warn(error);

@@ -55,7 +55,7 @@ export class HomeContainer extends Component {
 
     render() {
         // console.log(this.props.home);
-        const { hanzi, pinyin, translation } = this.props.state;
+        const { hanzi, pinyin, translation, showThankyou } = this.props.state;
         return (
             <div className="">
               <div class="contain">
@@ -64,10 +64,13 @@ export class HomeContainer extends Component {
                   <h1 class="form-label">Add a new word!</h1>
                   <h3 class="form-sub-label">We appreciate your help in contributing to this cause.</h3>
                   <div  class="form-class">
-                    <input class="input-elements input-text-style" value={hanzi} onChange={this._onChangeHanzi.bind(this)} type="text" placeholder={'hanzi'} name="中文"/>
+                    <input class="input-elements input-text-style" value={hanzi} onChange={this._onChangeHanzi.bind(this)} type="text" placeholder={'中文'} name="chinese"/>
                     {/*<input class="input-elements input-text-style" value={pinyin} onChange={this._onChangePinyin.bind(this)} type="text" placeholder={'pinyin'} name="pinyin"/>*/}
-                    <input class="input-elements input-text-style" value={translation} onChange={this._onChangeTranslation.bind(this)} type="text" placeholder={'translation'} name="English"/>
+                    <input class="input-elements input-text-style" value={translation} onChange={this._onChangeTranslation.bind(this)} type="text" placeholder={'english'} name="English"/>
                     <button class="input-elements input-submit-button" onClick={this._submit.bind(this)}>{'Submit'}</button>
+
+                    {showThankyou && <div class="thankyou">Thank You!</div>}
+
                   </div>
                 </div>
               </div>
