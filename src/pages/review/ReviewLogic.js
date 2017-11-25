@@ -32,7 +32,7 @@ query {
 });
 
 
-const reviewWord = createLogic({
+const rejectWord = createLogic({
     type: 'REVIEW_REJECT', // only apply this logic to this type
     latest: true, // only take latest
     async process({
@@ -62,7 +62,7 @@ const reviewWord = createLogic({
     }
 });
 
-const reviewWord = createLogic({
+const approveWord = createLogic({
     type: 'REVIEW_APPROVE', // only apply this logic to this type
     latest: true, // only take latest
     async process({
@@ -93,5 +93,5 @@ const reviewWord = createLogic({
 });
 
 
-export default[reviewWord];
+export default[reviewWord, rejectWord, approveWord];
 
