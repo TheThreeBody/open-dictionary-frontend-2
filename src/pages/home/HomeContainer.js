@@ -21,14 +21,24 @@ export class HomeContainer extends Component {
     render() {
         return (
             <div class = "">
-            <header>
-                <h1 class = "page-name"> Open Dictionary
-                <ul class = "nav">
-                    <li class = "nav-object"><a href = "#"> Register </a></li>
-                    <li class = "nav-object"><a href = "#"> Sign in </a></li>
-                </ul>
-                </h1>
-            </header>
+              <header>
+                  <h1 class = "page-name"> Open Dictionary</h1>
+              </header>
+              <div class="container-ui">
+                <div class="contain-search-bar">
+                  <h1 id="search-bar-label">Type in Hanzi</h1>
+                  <div class="search-bar-div">
+                    <input placeholder="你好！" type="text" class="search-bar-itself"></input>
+                    <div class="contain-img-search">
+                      <img src="" id="img-search"></img>
+                    </div>
+                  </div>
+                  <button class="submit-button">Submit</button>
+                </div>
+                <div class="contain-translation-results">
+                  <h1>Translations</h1>
+                </div>
+              </div>
             </div>
         )
     }

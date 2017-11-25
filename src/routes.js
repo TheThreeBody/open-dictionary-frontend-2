@@ -10,8 +10,7 @@ import Addword from './pages/addword/AddwordContainer';
 
 export default (
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Open Dictionary</a>
+        <nav class="navbar navbar-expand-lg navbar-design">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -42,5 +41,6 @@ export default (
         <Route exact path="/login" component={Login}/>
         <Route exact path="/user" component={User}/>
         <Route exact path="/register" component={Register}/>
+        <Route exact path="/addword" component={Addword}/>
     </div>
 );

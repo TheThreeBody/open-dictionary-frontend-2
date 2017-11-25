@@ -1,8 +1,18 @@
-
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+body{
+  background-color:#2292f9;
+}
+*{
+  font-family:'Raleway';
+  color:white;
+}
+header{
+  padding-left:30px;
+}
 .page-name {
     margin: 0;
-    background: lightgrey;
-    padding: 10px;
+    font-weight:100;
+    font-size:80px;
 }
 
 .nav {
@@ -26,6 +36,67 @@
 }
 
 a {
-    color :black;
+    color :white;
     text-decoration: none;
+}
+
+
+.container-ui{
+  padding:20px;
+}
+.contain-search-bar{
+  width:500px;
+  margin:auto;
+  margin-top:7vh;
+
+  display:block;
+}
+#search-bar-label{
+  font-weight:100;
+  font-size:30px;
+  width:100%;
+  text-align:center;
+}
+.search-bar-div{
+  margin-top:10px;
+  width:500px;
+}
+.search-bar-itself{
+  width:100%;
+  height:100%;
+  border:1px solid white;
+  padding:10px;
+  color:black;
+}
+.search-bar-itself:focus{
+  outline:0;
+}
+.submit-button{
+  padding:10px 25px;
+  border:1px solid white;
+  display: block;
+  margin:auto;
+  font-size:15px;
+  margin-top:15px;
+  color:white;
+  background-color: #2292f9;
+}
+.submit-button:hover{
+  background-color:white;
+  color:#2292f9;
+  transition:all ease-in-out 250ms;
+}
+
+
+.contain-translation-results{
+  width:70%;
+  padding:30px;
+  display:block;
+  margin:auto;
+}
+.contain-translation-results > h1{
+  color:white;
+  font-weight:100;
+  font-size:30px;
+
 }

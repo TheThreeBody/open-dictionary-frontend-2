@@ -26,15 +26,44 @@ export class HomeContainer extends Component {
         // this.props.logic("GET_DATA_REQUEST", {})
     }
 
+    _submit() {
+      const { hanzi, pinyin, translation } = this.props.state;
+      this.props.logic('ADDWORD_TRANSLATION', {
+        hanzi,
+        pinyin,
+        translation,
+      })
+    }
+
+    _onChangeHanzi(evt) {
+      this.props.logic('ADDWORD_SET_STATE', {
+        hanzi: evt.target.value
+      })
+    }
+
+    _onChangePinyin(evt) {
+      this.props.logic('ADDWORD_SET_STATE', {
+        pinyin: evt.target.value
+      })
+    }
+
+    _onChangeTranslation(evt) {
+      this.props.logic('ADDWORD_SET_STATE', {
+        translation: evt.target.value
+      })
+    }    
+
     render() {
         // console.log(this.props.home);
+        const { hanzi, pinyin, translation } = this.props.state;
         return (
-            <div class = "">
-            
-              <input type="text" name="email"/><br/>
-              <input type="text" name="email"/><br/>
-              <input type="text" name="email"/>
+            <div className="">
+              <input value={hanzi} onChange={this._onChangeHanzi.bind(this)} type="text" placeholder={'hanzi'} name="hanzi"/><br/>
+              <input value={pinyin} onChange={this._onChangePinyin.bind(this)} type="text" placeholder={'pinyin'} name="pinyin"/><br/>
 
+              <input value={translation} onChange={this._onChangeTranslation.bind(this)} type="text" placeholder={'translation'} name="translation"/><br/>
+
+              <button onClick={this._submit.bind(this)}>{'Submit'}</button>
             </div>
         )
     }
