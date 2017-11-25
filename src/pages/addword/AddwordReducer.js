@@ -4,6 +4,8 @@ import {createReducer} from '../../helperMethods';
 // Initial State
 const initialState = {
     //Add States Here
+    hanzi: '',
+    
 };
 
 export default createReducer(initialState, {

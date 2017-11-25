@@ -41,5 +41,6 @@ export default (
         <Route exact path="/login" component={Login}/>
         <Route exact path="/user" component={User}/>
         <Route exact path="/register" component={Register}/>
+        <Route exact path="/addword" component={Addword}/>
     </div>
 );
