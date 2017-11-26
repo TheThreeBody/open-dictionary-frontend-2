@@ -67,66 +67,6 @@ class LoginContainer extends Component {
 
                   { translationsComponents }
 
-                  {/*<li class="review-words-item">
-                    <ul class="within-item">
-                      <li>
-                        <div class="contain-items-in-list contain-word">
-                          <p class="text-within-item">Word: <b class="actual-word">你好</b></p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="contain-items-in-list contain-translation">
-                          <p class="text-within-item">Translation: <b class="actual-word">Hello</b></p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="contain-items-in-list contain-judgement">
-                          <button class="judgement-buttons judge-approve-btn">Approve</button>
-                          <button class="judgement-buttons judge-rejected-btn">Reject</button>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="review-words-item">
-                    <ul class="within-item">
-                      <li>
-                        <div class="contain-items-in-list contain-word">
-                          <p class="text-within-item">Word: <b class="actual-word">早上好</b></p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="contain-items-in-list contain-translation">
-                          <p class="text-within-item">Translation: <b class="actual-word">Good morning</b></p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="contain-items-in-list contain-judgement">
-                          <button class="judgement-buttons judge-approve-btn">Approve</button>
-                          <button class="judgement-buttons judge-rejected-btn">Reject</button>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="review-words-item">
-                    <ul class="within-item">
-                      <li>
-                        <div class="contain-items-in-list contain-word">
-                          <p class="text-within-item">Word: <b class="actual-word">讨厌</b></p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="contain-items-in-list contain-translation">
-                          <p class="text-within-item">Translation: <b class="actual-word">Love</b></p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="contain-items-in-list contain-judgement">
-                          <button class="judgement-buttons judge-approve-btn">Approve</button>
-                          <button class="judgement-buttons judge-rejected-btn">Reject</button>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>*/}
                 </ul>
               </div>
             </div>
