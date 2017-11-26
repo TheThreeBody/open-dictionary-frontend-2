@@ -80,7 +80,7 @@ export class HomeContainer extends Component {
                     </div>
 
                   </div>
-                  <button class="submit-button" onClick={this.search}>Submit</button>
+                  <button class="submit-button" onClick={this.search}>Search</button>
                 </div>
                 <div class="contain-translation-results">
                     <h1 >Translations</h1>
